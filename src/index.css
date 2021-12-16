@@ -1,13 +1,116 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #cabef0;
+}
+#main {
+  background-color: #f0cfef;
+  color: #9e929d;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 40px;
+  font-size: large;
+  font-family: 'Open Sans', sans-serif;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.buttons {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #cabef0;
+}
+.taskClose {
+  background-color: #f0cfef;
+}
+.task {
+  list-style-type: none;
+  border: solid #9e929d 3px;
+  margin-bottom: 5px;
+  background-color: #cabef0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+}
+.buttons:hover {
+  background-color: #d6caff;
+}
+.taskClose:hover {
+  background-color: #ffd5fe;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #cabef0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .searchBar {
+    width: 75%;
+  }
+  .task {
+    width: 75%;
+    margin: 0px auto 10px auto;
+    font-size: 1.25rem;
+  }
+  .buttons {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #main {
+    width: 70%;
+  }
+  .searchBar {
+    width: 60%;
+  }
+  .task {
+    width: 60%;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  .buttons {
+    padding: 25px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #main {
+    width: 60%;
+  }
+  .searchBar {
+    width: 50%;
+  }
+  .task {
+    width: 50%;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  .buttons {
+    padding: 30px;
+  }
 }
